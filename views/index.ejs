@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="tabs is-centered">
+        <ul>
+            <li>
+                <a> Search </a>
+            </li>
+        </ul>
+    </div>
+    <form method="POST" action="/">
+        <div class="card-content">
+            <p>Find user by username.</p>
+            <div class="field mt-3">
+                <p class="control has-icons-left">
+                    <input class="input" name="username" type="text" placeholder="username">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-at"></i>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <input type="submit" class="button is-link is-fullwidth" value="Search">
+        </footer>
+    </form>
+</div>
+
+<div class="mt-5 has-text-centered">
+    username not register? <a href="/register"> register new user </a>
+</div>

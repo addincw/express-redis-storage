@@ -1,0 +1,6 @@
+<% if(typeof notification != 'undefined') { %>
+<div class="notification is-<%= notification.type || 'danger' %>">
+    <button class="delete"></button>
+    <%= notification.message %>
+</div>
+<% } %>

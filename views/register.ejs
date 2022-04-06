@@ -1,0 +1,65 @@
+<div class="card">
+    <div class="tabs is-centered">
+        <ul>
+            <li>
+                <a> Register </a>
+            </li>
+        </ul>
+    </div>
+    <form method="POST" action="/register">
+        <div class="card-content">
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input
+                        class="input <%= (typeof errors != 'undefined' && (errors.username != undefined)) ? 'is-danger' : '' %>"
+                        name="username"
+                        type="text"
+                        placeholder="Username no space"
+                        value="<%= (typeof data != 'undefined' && (data.username != 'undefined')) ? data.username : '' %>"
+                        >
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-at"></i>
+                    </span>
+                </p>
+                <p class="help is-danger"><%= (typeof errors != 'undefined' && (errors.name != undefined)) ? errors.username : '' %></p>
+            </div>
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input
+                        class="input <%= (typeof errors != 'undefined' && (errors.name != undefined)) ? 'is-danger' : '' %>"
+                        name="name"
+                        type="text"
+                        placeholder="Name"
+                        value="<%= (typeof data != 'undefined' && (data.name != 'undefined')) ? data.name : '' %>"
+                        >
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-user"></i>
+                    </span>
+                </p>
+                <p class="help is-danger"><%= (typeof errors != 'undefined' && (errors.name != undefined)) ? errors.name : '' %></p>
+            </div>
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input
+                        class="input <%= (typeof errors != 'undefined' && (errors.email != undefined)) ? 'is-danger' : '' %>"
+                        name="email"
+                        type="email"
+                        placeholder="Email"
+                        value="<%= (typeof data != 'undefined' && (data.email != 'undefined')) ? data.email : '' %>"
+                        >
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                </p>
+                <p class="help is-danger"><%= (typeof errors != 'undefined' && (errors.email != undefined)) ? errors.email : '' %></p>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <input class="button is-link is-fullwidth" type="submit" value="Register">
+        </footer>
+    </form>
+</div>
+
+<div class="mt-5 has-text-centered">
+    find registered user? <a href="/"> search user </a>
+</div>
